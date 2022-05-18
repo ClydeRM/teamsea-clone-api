@@ -8,10 +8,6 @@ input CreateDonationInput {
   exampleField: Int
 }
 
-input UpdateDonationInput {
-  id: Int!
-}
-
 type Query {
   donations: [Donation]!
   donation(id: Int!): Donation
@@ -19,6 +15,4 @@ type Query {
 
 type Mutation {
   createDonation(createDonationInput: CreateDonationInput!): Donation!
-  updateDonation(updateDonationInput: UpdateDonationInput!): Donation!
-  removeDonation(id: Int!): Donation
 }
