@@ -19,6 +19,7 @@ datasource db {
 
 model Donation {
   id          Int      @id @default(autoincrement())
+  /// @Validator.IsInt()
   count       Int
   createdAt   DateTime @default(now())
   /// @Validator.MinLength(3)
