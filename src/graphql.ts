@@ -8,7 +8,7 @@
 /* tslint:disable */
 /* eslint-disable */
 export class CreateDonationInput {
-    count?: Nullable<number>;
+    count: number;
     displayName: string;
     email: string;
     mobile?: Nullable<string>;
@@ -24,7 +24,7 @@ export class OrderByParams {
 
 export class Donation {
     id: number;
-    count?: Nullable<number>;
+    count: number;
     displayName: string;
     email: string;
     mobile?: Nullable<string>;
