@@ -7,6 +7,7 @@ import * as Validator from 'class-validator';
 export class DonationCreateInput {
 
     @Field(() => Int, {nullable:false})
+    @Validator.IsInt()
     count!: number;
 
     @Field(() => Date, {nullable:true})

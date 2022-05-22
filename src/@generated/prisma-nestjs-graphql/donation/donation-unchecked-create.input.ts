@@ -10,6 +10,7 @@ export class DonationUncheckedCreateInput {
     id?: number;
 
     @Field(() => Int, {nullable:false})
+    @Validator.IsInt()
     count!: number;
 
     @Field(() => Date, {nullable:true})
