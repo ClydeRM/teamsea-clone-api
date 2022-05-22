@@ -3,10 +3,12 @@ import { ApolloDriver } from '@nestjs/apollo';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
 import { GraphQLDateTime } from 'graphql-iso-date';
+
+import { DonationsModule } from './donations/donations.module';
+import { PrismaModule } from './prisma/prisma.module';
+
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { DonationsModule } from './donations/donations.module';
-
 @Module({
   imports: [
     GraphQLModule.forRoot({
@@ -17,6 +19,7 @@ import { DonationsModule } from './donations/donations.module';
       resolvers: { DateTime: GraphQLDateTime }, // Use for timestamp scalar
     }),
     DonationsModule,
+    PrismaModule,
   ],
   controllers: [AppController],
   providers: [AppService],
