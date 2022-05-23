@@ -17,6 +17,10 @@ import { AppService } from './app.service';
       playground: false, // Turn off GQL playground
       plugins: [ApolloServerPluginLandingPageLocalDefault()], // Use Apollo sandbox replace GQL playground
       resolvers: { DateTime: GraphQLDateTime }, // Use for timestamp scalar
+      subscriptions: {
+        'graphql-ws': true,
+        'subscriptions-transport-ws': true,
+      },
     }),
     DonationsModule,
     PrismaModule,
